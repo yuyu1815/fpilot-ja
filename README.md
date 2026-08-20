@@ -95,8 +95,8 @@ FPilot_JA_patch.bat "C:\path\to\FPilot.exe"
 
 ```json
 {
-  "FontName": "yumin.ttf",
-  "InspectorFontName": "yumin.ttf"
+  "FontName": "malgun.ttf",
+  "InspectorFontName": "malgun.ttf"
 }
 ```
 
@@ -104,7 +104,7 @@ FPilot_JA_patch.bat "C:\path\to\FPilot.exe"
 > FPilot v0.8.3 の `FontName` / `InspectorFontName` には、フォントのフェイス名 (`Yu Gothic UI` など) をそのまま指定するのではなく、**FPilot が受理する、Windows に登録されたフォントのファイル名 (拡張子 `.ttf`)** を指定してください。フェイス名をそのまま書いても受理されない場合があります。
 
 - 実証済みの設定値:
-  - `yumin.ttf` (Yu Mincho / 游明朝) — この環境で受理され、日本語表示が正常であることを実証済み
+  - `malgun.ttf` (Yu Mincho / 游明朝) — この環境で受理され、日本語表示が正常であることを実証済み
   - `yumindb.ttf` (Yu Mincho Demibold / 游明朝 Demibold) — 同じ Yu Mincho ファミリの別ウェイト
 - `Yu Gothic UI`、`メイリオ`、`Noto Sans JP` などの**フェイス名をそのまま指定するのは避けてください**。受理されない可能性があります。
 - フォントの実体が `.ttc` (TrueType Collection) の場合、このバージョンでは受理されない可能性があります。お使いの Windows 環境で実際に受理されるか確認してください。
