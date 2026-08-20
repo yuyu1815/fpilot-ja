@@ -3,6 +3,7 @@
 FPilot v0.8.3 用の日本語表示パッチスクリプトです。Windows のドラッグ&ドロップだけで、公式配布の `FPilot.exe` から日本語グリフ対応版 `FPilot_JA.exe` を生成できます。
 ## Thanks
 debugをしていただいた `Nakajima Megumi` には感謝申し上げます
+---
 > [!WARNING]
 > このリポジトリ / Release には **FPilot 本体の EXE は含まれていません**。
 >
