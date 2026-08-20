@@ -37,6 +37,18 @@ FPilot v0.8.3 用の日本語表示パッチスクリプトです。Windows の�
 - Release ページ: <https://github.com/yuyu1815/fpilot-ja/releases/tag/v0.8.3>
 - Code ボタンからリポジトリ全体を取得しても構いません
 
+#### 対応表
+
+| 対応FPilotバージョン | パッチBAT | Release | 生成ファイル | 状態 |
+|---|---|---|---|---|
+| v0.8.3 | `FPilot_JA_patch.bat` | [v0.8.3](https://github.com/yuyu1815/fpilot-ja/releases/tag/v0.8.3) | `FPilot_JA.exe` | ✅ 最新 |
+
+> [!WARNING]
+> - **BAT は対応バージョン専用です。異なるバージョンの EXE には使用しないでください。**
+> - 対応していない EXE を渡した場合、署名検証により安全に中止します。
+> - 今後の FPilot バージョンは、この表に対応 BAT と Release を追加します。
+> - 同じフォルダに複数の `FPilot.exe` がある場合、表のバージョンと一致するものを選んでください。
+
 > [!NOTE]
 > Release に添付されているのは `FPilot_JA_patch.bat` のみです (**EXE 本体は添付していません**)。BAT ファイル単体で自己完結しており、Python など追加ツールのインストールは不要です (必要環境は Windows 標準の PowerShell のみ)。
 
