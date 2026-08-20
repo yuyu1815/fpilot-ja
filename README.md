@@ -33,18 +33,29 @@ FPilot_JA_patch.bat "C:\path\to\FPilot.exe"
 
 ## フォント設定について
 
-このパッチはグリフの範囲テーブルのみを変更します。**フォントの設定はユーザーの `FPilot-Config.json` をそのまま使用します**。日本語を正しく表示するには、日本語対応フォントを設定してください。
+このパッチはフォントをハードコードしません。グリフの範囲テーブルのみを変更するため、**フォントはユーザーの `FPilot-Config.json` の設定がそのまま使用されます**。
 
-推奨例（`FPilot-Config.json`）:
+FPilot v0.8.3 の `FontName` / `InspectorFontName` には、フォントのフェイス名ではなく、**このアプリが受理する、Windows に登録されたフォントのファイル名（拡張子 `.ttf`）** を指定します。フェイス名をそのまま書いても受理されない場合があります。
+
+この環境で実証済みの設定例（`FPilot-Config.json`）:
 
 ```json
 {
-  "FontName": "Yu Gothic UI",
-  "InspectorFontName": "Yu Gothic UI"
+  "FontName": "yumin.ttf",
+  "InspectorFontName": "yumin.ttf"
 }
 ```
 
-`Yu Gothic UI` の代わりに `游ゴシック`, `メイリオ`, `BIZ UDゴシック`, `Noto Sans JP` など、システムにインストールされている日本語対応フォント名を指定できます。
+- `yumin.ttf` (Yu Mincho / 游明朝) — この環境で受理され、日本語表示が正常であることを実証済みです。
+- `yumindb.ttf` (Yu Mincho Demibold / 游明朝 Demibold) — 同じ Yu Mincho ファミリの別ウェイト。
+
+注意:
+
+- `Yu Gothic UI`、`メイリオ`、`Noto Sans JP` などの**フェイス名をそのまま指定するのは避けてください**。受理されない可能性があります。
+- フォントの実体が `.ttc` (TrueType Collection) の場合、このバージョンでは受理されない可能性があります。お使いの Windows 環境で実際に受理されるか確認してください。
+- Explorer 標準の Yu Gothic UI は通常 TTF ではなく TTC のため、設定だけでは直接使えない可能性があります。
+
+指定するファイル名は `C:\Windows\Fonts` に実在し、レジストリ (HKLM Fonts) に登録されているものです。
 
 ## 対応範囲
 
